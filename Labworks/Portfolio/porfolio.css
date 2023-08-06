@@ -1,0 +1,221 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.navbg{
+    background-color: rgba(0, 0, 0, 0.616);
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+}
+
+
+body{
+    /* width: 80%; */
+    /* margin: 25px auto; */
+    /* background-color: green; */
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/heroimagefile2.webp");
+    min-height: 650px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-end;
+}
+
+
+.hero-header{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 100px;
+    /* background-color: yellow; */
+    
+}
+
+.hero-intro{
+    background-color: rgba(0, 0, 0, 0.422);
+    margin-top:20px ;
+    color: white;
+    padding:30px 100px;
+    /* flex: 1; */
+}
+ul{
+    /* background-color: red; */
+    padding: 10px 10px 0px 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    margin: 20px auto ;
+    padding: 5px;
+    
+}
+
+.container-header{
+   
+    font-size: 25px;
+    font-weight: bold;
+    /* background-color: yellow; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    /* border-bottom: 3px solid black; */
+}
+
+.container-header svg, .container i{
+    margin-right:10px ;
+    
+}
+
+.single-inner-container{
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* justify-content: center; */
+
+
+}
+
+.single-inner-inner-container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    width: fit-content;
+    max-width: 30%;
+    /* border: 2px solid lightgray; */
+    border-radius: 8px;
+    margin:5px;
+    cursor: pointer;
+}
+
+.single-inner-inner-container:hover{
+    color: white;
+    background-color: black;
+    transition: ease-in 0.5s;
+    transform: scale(1.0005);
+    box-shadow: 0px 5px 10px rgb(201, 201, 201);
+
+
+}
+
+.single-inner-inner-container-header{
+    font-size: 18px ;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.social-links-container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+
+.single-social-button{
+    height: 30px;
+    width: 30px;
+    /* background-color: red; */
+    /* padding: 5px; */
+    border-radius: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    color: black;
+}
+.single-social-button:hover,.link:hover{
+    background-color: lightgray;
+    text-decoration: none;
+    color: black;
+
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0px 20px;
+    color: black;
+
+    
+}
+.link{
+    width: fit-content;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    /* background-color: green; */
+    border-radius: 50px;
+    margin: 0px 10px;
+}
+
+.modalcontainer{
+    /* background-color: red; */
+    padding: 10px;
+
+    
+}
+
+
+
+.modalcontainer li{
+    background-color: #f7f7f7;
+    margin: 8px 0px;
+    list-style-type: none;
+    padding: 5px;
+    border-left: 5px solid black;
+
+}
+
+.modalcontainer ul{
+    padding: 0px;
+}
+.date{
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8x;
+    width: fit-content;
+    font-size: 12px;
+    margin: 5px 0px;
+}
+
+.institution{
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    font-size: 12px;
+    margin: 5px 0px;
+}
+
+
+.work-points{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-width: 400px){
+    
+    
+}
+
