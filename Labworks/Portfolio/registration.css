@@ -1,13 +1,21 @@
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+::-webkit-scrollbar{
+    display: none;
+}
 body{
     /* width: 80%;
     margin: 25px auto; */
 }
 
 .navbg{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.973);
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    margin-top: -21px;
 }
 h1{
     padding: 20px auto;
@@ -20,7 +28,7 @@ h1{
     /* background-color: red; */
     width: fit-content;
     margin: auto;
-    padding: 25px;
+    padding: 100px 25px;
     /* border-radius: 8px ; */
     /* border-top: 6px solid black; */
     margin-top: 20px;
@@ -52,4 +60,51 @@ input::-webkit-inner-spin-button {
 }
 label{
     font-weight: bold;
+}
+
+
+.social-links-container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+
+.single-social-button{
+    height: 30px;
+    width: 30px;
+    /* background-color: red; */
+    /* padding: 5px; */
+    border-radius: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    color: black;
+}
+.single-social-button:hover,.link:hover{
+    background-color: lightgray;
+    text-decoration: none;
+    color: black;
+
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0px 20px;
+    color: black;
+
+    
+}
+.link{
+    width: fit-content;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    /* background-color: green; */
+    border-radius: 50px;
+    margin: 0px 10px;
 }
