@@ -60,6 +60,8 @@ ul{
     /* background-color: green; */
     margin: 20px auto ;
     padding: 5px;
+
+
     
 }
 
@@ -85,6 +87,8 @@ ul{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
+    flex-wrap: wrap;
+  
     /* justify-content: center; */
 
 
@@ -101,6 +105,7 @@ ul{
     max-width: 30%;
     /* border: 2px solid lightgray; */
     border-radius: 8px;
+    min-width: 300px;
     margin:5px;
     cursor: pointer;
 }
