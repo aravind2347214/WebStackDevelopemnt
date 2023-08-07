@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script/map.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1 class="bg-red-500">Getting lattitude and longitude</h1>
+    <p>Timestamp : <span id="timestamp"></span></p>
+    <p>Latitude : <span id="lat"></span></p>
+    <p>Longitude : <span id="lon"></span></p>
+
+    <div id="error" style="background-color: red; font-size: 30px;"></div>
+    <!-- <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=77.50391006469728%2C12.877074026977066%2C77.6645851135254%2C12.991511228908237&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=13/12.9343/77.5842">View Larger Map</a></small> -->
+    <iframe 
+    id="maplink"
+    width="600" 
+    height="470" 
+    frameborder="1" 
+    scrolling="no" 
+    marginheight="0" 
+    marginwidth="0"
+    src="https://maps.google.com/maps?q=+12.9333872+,+77.5963159+&hl=es&z=14&amp;output=embed" 
+   >
+   </iframe>
+   </html>
