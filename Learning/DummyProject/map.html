@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./map.js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./map.js"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <script
+            type="text/javascript"
+            src="http://www.bing.com/api/maps/mapcontrol?callback=GetMap"
+            async
+            defer
+        ></script>
+    </head>
 
-    </script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-    <!-- <h1 class="bg-red-500">Getting lattitude and longitude</h1>
+    <body>
+        <!-- <h1 class="bg-red-500">Getting lattitude and longitude</h1>
     <p>Timestamp : <span id="timestamp"></span></p>
     <p>Latitude : <span id="lat"></span></p>
     <p>Longitude : <span id="lon"></span></p>
     
 
     <div id="error" style="background-color: red; font-size: 30px;"></div>  -->
-<!-- 
+        <!-- 
     <canvas >
 
     </canvas> -->
 
-
-    <!-- <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=77.50391006469728%2C12.877074026977066%2C77.6645851135254%2C12.991511228908237&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=13/12.9343/77.5842">View Larger Map</a></small> -->
-   <iframe 
+        <!-- <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=77.50391006469728%2C12.877074026977066%2C77.6645851135254%2C12.991511228908237&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=13/12.9343/77.5842">View Larger Map</a></small> -->
+        <!-- <iframe 
     id="maplink"
     width="600" 
     height="470" 
@@ -37,17 +41,106 @@
    
    >
 
-</iframe>
+</iframe> -->
 
-<div>
-    <div class="p-1 bg-red-500 flex flex-col w-[500px] mx-auto mt-5">
-        <div>Timestamp : <span id="timestamp"></span></div>
-        <div>Lattitude : <span id="lat"></span></div>
-        <div>Longitude : <span id="lon"></span></div>
-    </div>
-    <div class="bg-green-500">
+        <div class="w-[90%] mx-auto mt-20">
+            <div class="text-[60px] font-bold text-center">Embed Map in Webpage</div>
+            <div class="p-1 flex flex-col w-[500px] mt-5 mx-auto">
+                <!-- <div class="p-2 bg-gray-100 my-1 rounded rounded-md">
+          Timestamp : <span class="font-bold text-[20px]" id="timestamp"></span>
+        </div> -->
+                <div class="p-2 bg-gray-100 my-1 rounded rounded-md shadow-sm">
+                    Lattitude : <span class="font-bold text-[20px]" id="lat"></span>
+                </div>
+                <div class="p-2 bg-gray-100 my-1 rounded rounded-md shadow-sm">
+                    Longitude : <span class="font-bold text-[20px]" id="lon"></span>
+                </div>
+                <small class="p-1"><i class="fa-solid fa-circle-info mr-1"></i>Allow location to see the results</small>
+            </div>
+            <!-- Google Map -->
+            <div class="bg-gray-100 p-5 flex flex-row justify-between my-10 rounded rounded-md shadow-md">
+                <div class="w-1/2 p-5 flex flex-col">
+                    <div class="font-bold text-[30px]">Google Maps</div>
+                    <div>
+                        Google Maps shows you information about the places you're interested in, based on where you're
+                        looking and what you've searched for. When you explore locations on Google Maps, you sometimes
+                        see content provided by other users—such as reviews and photographs—to help you better
+                        understand those places.
+                    </div>
+                </div>
+                <div
+                    class="border-black bg-white border border-2 rounded rounded-md font-bold text-gray flex items-center justify-center text-center"
+                >
+                    <iframe
+                        width="600"
+                        height="400"
+                        frameborder="0"
+                        scrolling="no"
+                        marginheight="0"
+                        marginwidth="0"
+                        src="https://maps.google.com/maps?q=12.9343422,77.6057293&hl=es&z=14&amp;output=embed"
+                    >
+                    </iframe>
+                </div>
+            </div>
 
-    </div>
-</div>
-   </body>
-   </html>
+            <!-- TomTom Map -->
+            <div class="bg-gray-100 p-5 flex flex-row justify-between my-10 rounded rounded-md shadow-md">
+                <div
+                    id="myMap"
+                    style="position: relative; width: 600px; height: 400px"
+                    class="w-1/2 bg-white border border-2 border-black rounded-sm h-[400px] font-bold text-gray flex items-center justify-center"
+                ></div>
+                <div class="w-1/2 p-5 flex flex-col">
+                    <div class="font-bold text-[30px]">Bing Maps</div>
+                    <div>
+                        Bing Maps (previously Live Search Maps, Windows Live Maps, Windows Live Local, and MSN Virtual
+                        Earth) is a web mapping service provided as a part of Microsoft's Bing suite of search engines
+                        and powered by the Bing Maps Platform framework which also support Bing Maps for Enterprise APIs
+                        and Azure Maps APIs.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Open Street Map -->
+            <div class="bg-gray-100 p-5 flex flex-row justify-between my-10 rounded rounded-md shadow-md">
+                <div class="w-1/2 p-5 flex flex-col p-3">
+                    <div class="font-bold text-[30px]">Open Street Map</div>
+                    <div>
+                        OpenStreetMap is a free, editable map of the whole world that is being built by volunteers
+                        largely from scratch and released with an open-content license.13-Apr-2022
+                    </div>
+                </div>
+                <div
+                    class="bg-white border border-2 border-black rounded-sm font-bold text-gray flex items-center justify-center"
+                >
+                    <!-- Map Iframe -->
+                    <iframe
+                        width="600"
+                        height="400"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=77.60464042425157%2C12.93320084108428%2C77.60715097188951%2C12.934988924110227&amp;layer=mapnik"
+                        style="border: 1px solid black"
+                    ></iframe>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <div class="flex flex-col bg-gray-100 my-10 rounded rounded-md p-5 shadow-md">
+                <div class="font-bold text-[40px] text-center">HTML Canvas</div>
+                <div class="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus facere, sit sed quae quibusdam
+                    error quia numquam vitae incidunt perferendis reprehenderit, dolor omnis reiciendis illum et dicta
+                    nemo. Quia!
+                </div>
+                <canvas
+                    id="canvas"
+                    width="800px"
+                    height="400px"
+                    class="border border-2 border-black bg-white rounded rounded-md w-[800px] h-[400px] mx-auto mt-10"
+                >
+                    your browser does not support canvas
+                </canvas>
+            </div>
+        </div>
+    </body>
+</html>
