@@ -128,9 +128,9 @@
             <div class="flex flex-col bg-gray-100 my-10 rounded rounded-md p-5 shadow-md">
                 <div class="font-bold text-[40px] text-center">HTML Canvas</div>
                 <div class="text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque natus facere, sit sed quae quibusdam
-                    error quia numquam vitae incidunt perferendis reprehenderit, dolor omnis reiciendis illum et dicta
-                    nemo. Quia!
+                    The HTML element is used to draw graphics, on the fly, via scripting (usually JavaScript). The
+                    element is only a container for graphics. You must use a script to actually draw the graphics.
+                    Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
                 </div>
                 <canvas
                     id="canvas"
@@ -140,6 +140,78 @@
                 >
                     your browser does not support canvas
                 </canvas>
+            </div>
+
+            <div class="flex flex-col bg-gray-100 my-10 rounded rounded-md p-5 shadow-md">
+                <div class="font-bold text-[40px] text-center">SVG Implementation</div>
+                <div class="text-center">
+                    SVG is a language for describing 2D graphics in XML. Canvas draws 2D graphics, on the fly (with a
+                    JavaScript). SVG is XML based, which means that every element is available within the SVG DOM. You
+                    can attach JavaScript event handlers for an element.
+                </div>
+                <div
+                    class="w-[800px] py-10 flex flex-row h-[400px] bg-white mx-auto mt-10 border border-2 border-black rounded rounded-md"
+                >
+
+                        <svg height="100" width="200">
+                            <polygon
+                                points="220,10 300,210 170,234"
+                                style="fill: black; stroke: gray; stroke-width: 1;transform: scale(0.5);"
+                            />
+                        </svg>
+             
+
+
+                    <svg height="500" width="500">
+                        <ellipse
+                            cx="200"
+                            cy="80"
+                            rx="100"
+                            ry="50"
+                            style="fill: balck; stroke: gray; stroke-width: 2;transform: scale(0.5);"
+                        />
+                    </svg>
+
+                    <svg height="100" width="100">
+                        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="black" />
+                    </svg>
+
+                    <svg width="100" height="100">
+                        <rect
+                            width="300"
+                            height="100"
+                            style="fill: black; stroke-width: 3; stroke: rgb(0, 0, 0)"
+                        />
+                    </svg>
+
+                    <svg height="400" width="450">
+                        <path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
+                        stroke-width="3" fill="none" />
+                        <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
+                        stroke-width="3" fill="none" />
+                        <path d="M 175 200 l 150 0" stroke="green" stroke-width="3"
+                        fill="none" />
+                        <path d="M 100 350 q 150 -300 300 0" stroke="blue"
+                        stroke-width="5" fill="none" />
+                        <!-- Mark relevant points -->
+                        <g stroke="black" stroke-width="3" fill="black">
+                          <circle id="pointA" cx="100" cy="350" r="3" />
+                          <circle id="pointB" cx="250" cy="50" r="3" />
+                          <circle id="pointC" cx="400" cy="350" r="3" />
+                        </g>
+                        <!-- Label the points -->
+                        <g font-size="30" font-family="sans-serif" fill="black" stroke="none"
+                        text-anchor="middle">
+                          <text x="100" y="350" dx="-30">A</text>
+                          <text x="250" y="50" dy="-10">B</text>
+                          <text x="400" y="350" dx="30">C</text>
+                        </g>
+                      </svg>
+                      
+
+
+                </div>
+
             </div>
         </div>
     </body>
