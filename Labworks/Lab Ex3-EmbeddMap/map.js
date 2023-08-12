@@ -12,7 +12,10 @@ window.onload=()=>{
 }
 
 const locationSuccess=(data)=>{
+
     console.log("Success",data)
+    document.getElementById("status").style.color="green"
+    document.getElementById("status").innerHTML="Success";
     lat=data.coords.latitude;
     lon=data.coords.longitude;
     document.getElementById("lat").innerHTML=lat
@@ -24,7 +27,8 @@ const locationSuccess=(data)=>{
 
 const locationError=(data)=>{
     console.log("Error",data)
-    document.getElementById("error").innerHTML=data.message;
+    document.getElementById("status").style.color="red"
+    document.getElementById("status").innerHTML=data.message;
 }
 
 // Canvas Code

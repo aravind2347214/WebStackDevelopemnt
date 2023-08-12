@@ -56,6 +56,9 @@
                     Longitude : <span class="font-bold text-[20px]" id="lon"></span>
                 </div>
                 <small class="p-1"><i class="fa-solid fa-circle-info mr-1"></i>Allow location to see the results</small>
+                <div class="p-2 bg-gray-100 my-1 rounded rounded-md shadow-sm">
+                    Status : <span class="font-bold text-[20px]" id="status"></span>
+                </div>
             </div>
             <!-- Google Map -->
             <div class="bg-gray-100 p-5 flex flex-row justify-between my-10 rounded rounded-md shadow-md">
@@ -184,33 +187,30 @@
                         />
                     </svg>
 
-                    <svg height="400" width="450">
-                        <path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
-                        stroke-width="3" fill="none" />
-                        <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
-                        stroke-width="3" fill="none" />
-                        <path d="M 175 200 l 150 0" stroke="green" stroke-width="3"
-                        fill="none" />
-                        <path d="M 100 350 q 150 -300 300 0" stroke="blue"
-                        stroke-width="5" fill="none" />
-                        <!-- Mark relevant points -->
-                        <g stroke="black" stroke-width="3" fill="black">
-                          <circle id="pointA" cx="100" cy="350" r="3" />
-                          <circle id="pointB" cx="250" cy="50" r="3" />
-                          <circle id="pointC" cx="400" cy="350" r="3" />
-                        </g>
-                        <!-- Label the points -->
-                        <g font-size="30" font-family="sans-serif" fill="black" stroke="none"
-                        text-anchor="middle">
-                          <text x="100" y="350" dx="-30">A</text>
-                          <text x="250" y="50" dy="-10">B</text>
-                          <text x="400" y="350" dx="30">C</text>
-                        </g>
-                      </svg>
-                      
+                </div>  
+            </div>
 
 
+            <div class="flex flex-col bg-gray-100 my-10 rounded rounded-md p-5 shadow-md">
+                <div class="font-bold text-[40px] text-center">Tailwind Grid</div>
+                <div class="text-center">
+                    The HTML element is used to draw graphics, on the fly, via scripting (usually JavaScript). The
+                    element is only a container for graphics. You must use a script to actually draw the graphics.
+                    Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
                 </div>
+
+                <div class="border border-2 p-4 border-black bg-white rounded font-bold rounded-md w-[800px] h-[400px] mx-auto mt-10 grid grid-cols-3 gap-4">
+                    <div class=" flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">A</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">B</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">C</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">D</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">E</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">F</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">G</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">H</div>
+                    <div class="flex items-center justify-center p-3 text-center bg-gray-200 border border-2 border-black">I</div>
+                </div>
+
 
             </div>
         </div>
