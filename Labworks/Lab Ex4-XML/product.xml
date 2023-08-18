@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="product.dtd" type="application/xml-dtd"?>
+<?xml-model href="product.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<products>
+        <product productId="p1" category="Electronics">
+            <productName> Iphone </productName>
+            <price>400</price>
+            <availableQuantity>100</availableQuantity>
+        </product>
+        <product productId="p2" category="Books">
+            <productName> Deception Point </productName>
+            <price>5</price>
+            <availableQuantity>60</availableQuantity>
+        </product>
+        <product productId="p3" category="Clothing">
+            <productName> Cotton Shirt </productName>
+            <price>20</price>
+            <availableQuantity>10</availableQuantity>
+        </product>
+    </products>

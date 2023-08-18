@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="alien.dtd" type="application/xml-dtd"?>
 <aliens>
-
     <alien aid="a1" lang="c">
         <name>Tommy</name>
         <salary>5000</salary>

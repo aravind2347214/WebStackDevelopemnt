@@ -1,0 +1,7 @@
+<!ELEMENT products (product+)>
+<!ELEMENT product (productName,price,availableQuantity)>
+<!ELEMENT productName (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT availableQuantity (#PCDATA)>
+<!ATTLIST product productId ID #REQUIRED>
+<!ATTLIST product category (Clothing|Electronics|Books) "dummy product" >

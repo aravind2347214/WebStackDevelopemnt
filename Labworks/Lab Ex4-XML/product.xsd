@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="priceType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="5" />
+            <xs:maxInclusive value="500" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="quantityType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="1000" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="categoryType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Electronics" />
+            <xs:enumeration value="Clothing" />
+            <xs:enumeration value="Books" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="products">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="productName" type="xs:string" />
+                            <xs:element name="price" type="priceType" />
+                            <xs:element name="availableQuantity" type="quantityType" />
+                        </xs:sequence>
+                        <xs:attribute name="productId" use="required" />
+                        <xs:attribute name="category" type="categoryType" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
