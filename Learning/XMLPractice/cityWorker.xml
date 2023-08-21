@@ -30,7 +30,7 @@
     </services>
 
     <payments>
-        <payment paymentStatus="cash" transactionId="t1" paymentMethod="credit-card" serviceId="s4" transactionDate="">
+        <payment paymentStatus="completed" transactionId="t1" paymentMethod="credit-card" serviceId="s4" transactionDate="">
             <amount>1000</amount>
         </payment>
     </payments>
