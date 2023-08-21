@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="accountType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="consumer" />
+        <xs:enumeration value="worker" />
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="serviceType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="electric" />
+        <xs:enumeration value="gardening" />
+        <xs:enumeration value="plumbing" />
+        <xs:enumeration value="painting" />
+        <xs:enumeration value="cleaning" />
+        <xs:enumeration value="cooking" />
+        <xs:enumeration value="it-support"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="paymentMethodType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="credit-card" />
+        <xs:enumeration value="debit-card" />
+        <xs:enumeration value="cash" />
+        <xs:enumeration value="upi" />
+        <xs:enumeration value="neft" />
+        <xs:enumeration value="bitcoin" />
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="paymentStatusType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="completed" />
+        <xs:enumeration value="pending" />
+        <xs:enumeration value="blocked" />
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="ratingType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="5" />
+        </xs:restriction>
+</xs:simpleType>
+    <xs:element name="cityWorker">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="clients">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="client">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="clientName" type="xs:string" />
+                                        <xs:element name="clientAge" type="xs:string" />
+                                        <xs:element name="clientLocation" type="xs:string" />
+                                        <xs:element name="contactNumber" type="xs:string" />
+                                        <xs:element name="clientAddress" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="clientId" use="required" />
+                                    <xs:attribute name="accType" type="accountType"  use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="workers">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="worker">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="workerName" type="xs:string" />
+                                        <xs:element name="profession" type="xs:string" />
+                                        <xs:element name="hourlyRate" type="xs:string" />
+                                        <xs:element name="workerLocation" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="workerId" use="required" />
+                                    <xs:attribute name="accType" type="accountType" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="services">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="service">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="estimatedDuration" type="xs:string" />
+                                        <xs:element name="estimatedCost" type="xs:string" />
+                                        <xs:element name="workerName" type="xs:string" />
+                                        <xs:element name="clientName" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="serviceId" use="required" />
+                                    <xs:attribute name="serviceType" type="serviceType" use="required" />
+                                    <xs:attribute name="clientId" use="required" />
+                                    <xs:attribute name="workerId" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="payments">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="payment">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="amount" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="paymentStatus" type="paymentStatusType" use="required" />
+                                    <xs:attribute name="transactionId" use="required" />
+                                    <xs:attribute name="paymentMethod" type="paymentMethodType" use="required" />
+                                    <xs:attribute name="serviceId" use="required" />
+                                    <xs:attribute name="transactionDate" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="locations">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="location">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cityName" type="xs:string" />
+                                        <xs:element name="population" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="locationId" use="required" />
+                                    <xs:attribute name="localCurrency" use="required" />
+                                    <xs:attribute name="localLanguage" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reviews">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="review">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="rating" type="ratingType" />
+                                        <xs:element name="comments">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="comment" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="clientId"
+                                                                        use="required" />
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="reviewId" use="required" />
+                                    <xs:attribute name="serviceId" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

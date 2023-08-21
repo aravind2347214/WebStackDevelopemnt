@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="cityWorker.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<cityWorker>
+    <clients>
+        <client clientId="c1" accType="consumer">
+            <clientName>Sam</clientName>
+            <clientAge>56</clientAge>
+            <clientLocation>Mumbai</clientLocation>
+            <contactNumber>9897638493</contactNumber>
+            <clientAddress>house 234,KPD residential Area,Mangalore</clientAddress>
+        </client>
+    </clients>
+
+    <workers>
+        <worker workerId="w1" accType="worker">
+            <workerName>John</workerName>
+            <profession>Plumber</profession>
+            <hourlyRate>70</hourlyRate>
+            <workerLocation>Kolkata</workerLocation>
+        </worker>
+    </workers>
+
+    <services>
+        <service serviceId="s1" serviceType="electric" clientId="c3" workerId="w4">
+            <estimatedDuration>4</estimatedDuration>
+            <estimatedCost>79</estimatedCost>
+            <workerName>Kenny</workerName>
+            <clientName>Falecia</clientName>
+        </service>
+    </services>
+
+    <payments>
+        <payment paymentStatus="cash" transactionId="t1" paymentMethod="credit-card" serviceId="s4" transactionDate="">
+            <amount>1000</amount>
+        </payment>
+    </payments>
+
+
+    <locations>
+        <location locationId="l1" localCurrency="rupees" localLanguage="Marati">
+            <cityName>Mumbai</cityName>
+            <population>143234</population>
+        </location>
+    </locations>
+
+    <reviews>
+        <review reviewId="r1" serviceId="s1">
+            <rating>3.5</rating>
+            <comments>
+                <comment clientId="c2">this is a dummy comment1</comment>
+                <comment clientId="c5">this is a dummy comment2</comment>
+                <comment clientId="c8">this is a dummy comment3</comment>
+            </comments>
+        </review>
+    </reviews>
+
+</cityWorker>
