@@ -1,0 +1,43 @@
+.customnav{
+    background-color: black;
+    color: white;
+}
+
+body{
+    margin: 0px !important;
+}
+
+.hero
+{
+    width: 100%;
+    height: 600px;
+    background-image: url("./images/homehero.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: baseline;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.674);
+   text-align: center;
+    margin-top:300px ;
+
+
+}
+
+.hero-desc{
+    color: white;
+}
+
+
+.hero-header{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+}

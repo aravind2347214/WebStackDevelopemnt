@@ -1,0 +1,96 @@
+.customnav{
+    background-color: black;
+    color: white;
+}
+
+body{
+    margin: 0px !important;
+}
+
+.hero
+{
+    width: 100%;
+    height: 600px;
+    background-image: url("./images/menuhero.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: baseline;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.311);
+    text-align: center;
+    margin-top:300px ;
+
+
+}
+
+.hero-desc{
+    color: white;
+}
+
+
+.hero-header{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+.menu-container{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-top:100px ;
+    margin-bottom: 100px;
+}
+
+
+.single-menu-card{
+
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    /* background-color: blue; */
+    margin: auto 10px;
+
+}
+
+
+.menu-heading{
+    padding:5px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.menu-item{
+
+    display: flex;
+    flex-direction: column;  
+
+}
+
+.single-menu-item{
+
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+
+.single-menu-item:hover{
+    background-color: black;
+    color: white;
+}
