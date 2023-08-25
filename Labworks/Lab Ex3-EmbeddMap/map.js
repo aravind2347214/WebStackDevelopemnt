@@ -2,11 +2,12 @@
 var lat;
 var lon;
 
-window.onload=()=>{
+window.onload = function(){
 
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(locationSuccess,locationError)
-    }
+    if(navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(locationSuccess,locationError)
+        }
     GetMap()
     drawCanvas()  
 }
@@ -26,9 +27,9 @@ const locationSuccess=(data)=>{
 }
 
 const locationError=(data)=>{
-    console.log("Error",data)
     document.getElementById("status").style.color="red"
     document.getElementById("status").innerHTML=data.message;
+    document.write("ehoolofmfijfj")
 }
 
 // Canvas Code
@@ -73,6 +74,7 @@ const locationError=(data)=>{
 
 
  function GetMap() {
+    
     var map = new Microsoft.Maps.Map('#myMap', {
         credentials: "AmjQR8_zqd0uisqaoH3SZbKRYPTDIP4n40vQH6DkbWs5HUR-HkPsTBJJC31L_dji"
     });

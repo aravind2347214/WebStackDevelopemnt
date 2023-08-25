@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="labexam.js"></script>
+    <script
+            type="text/javascript"
+            src="http://www.bing.com/api/maps/mapcontrol?callback=GetMap"
+            async
+            defer
+        ></script>
+    <title>Document</title>
+
+
+</head>
+<style>
+    .mapbox{
+        width: 500px;
+        height: 350px;
+        border:2px solid black;
+        margin: 100px auto;
+    }
+
+    .bttn{
+        background-color: black;
+        color: white;
+        padding: 8px 8px;
+        border-radius: 4px;
+    }
+
+    #apikeyinp{
+        border: 1px solid black;
+        padding: 5px ;
+        font-size: 20px;
+       border-radius: 5px;
+       margin:0pc 10px;
+    }
+
+    .container{
+        margin: 100px auto;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+
+    }
+
+
+
+
+
+
+</style>
+<body>
+
+    <div class="container">
+
+        <label for="apikeyinp"> API Key</label>
+        <input type="text" id="apikeyinp">
+        <button class="bttn" onclick="submit()">Get map</button>
+        <span id="error"></span>
+    </div>
+
+    <div id="myMap" class="mapbox"></div>
+    
+</body>
+</html>

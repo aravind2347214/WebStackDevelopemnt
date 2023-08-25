@@ -5,7 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<style>
+    .biggest{
+        display: flex;
+        flex-direction: row;
+        background-color: red;
+        padding: 10px;
+        width: 700px;
+        margin: 100px auto;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .box1{
+        display: flex;
+        flex-direction: column;
+        background-color: yellow;
+        padding: 10px;
+        width: 50%;
+    }
+
+    .box2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: orange;
+        width: 50%;
+    }
+
+    .title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .content{
+        font-size: 18px;
+        font-weight:lighter;
+    }
+
+    .button-container{
+        display: flex;
+        flex-direction: row;
+        background-color: brown;
+        padding: 10px;
+    }
+
+    .bttun{
+        padding: 5px 10px ;
+        background-color: black;
+        color: white;
+        margin: 0px 10px ;
+    }
+
+</style>
+
+
+
+
 <body>
-    
+    <div class="biggest">
+        <div class="box1">
+            <div class="title">This is the Title</div>
+            <div class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque assumenda voluptatem saepe magnam unde veritatis iste fugit. Quisquam sapiente ipsa optio iste, modi dignissimos, maxime, cumque unde delectus eum consequatur?</div>
+            <div class="button-container">
+                <button class="bttun">Submit</button>
+                <button class="bttun">Reset</button>
+            </div>
+        </div>
+        <div class="box2">
+            <img src="dog.webp" height="300px" width="300px" alt="">
+        </div>
+    </div>
 </body>
 </html>
