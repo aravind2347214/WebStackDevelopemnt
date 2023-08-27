@@ -21,7 +21,7 @@ schema = etree.XMLSchema(xsd)
 
 
 # Validate transformed HTML against XSD schema
-validation_result = schema.validate(html)
+validation_result = schema.validate(xml)
 
 if validation_result:
     print("Validation successful!")
