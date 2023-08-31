@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+
+    <form class="form-container">
+        <div class="form-header">Form Validation</div>
+        <div class="form-element">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" name="" id="" placeholder="Firstname Lastname" required>
+            <span class="err" id="name-error"></span>
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap;" >
+            <div class="form-element" style="flex: 1;margin-right: 10px;">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="" id="" placeholder="firstname@domain.com" required>
+                <span class="err" id="email-error"></span>
+            </div>
+            <div class="form-element">
+                <label for="dob">Date of Birth</label>
+                <input id="dob" type="date" name="" id="" placeholder="" required>
+                <span class="err" id="dob-error"></span>
+            </div>
+        </div>
+
+        <div class="form-element">
+            <label for="password">Password</label>
+            <input id="password" type="password" name="" id="" placeholder="" required>
+            <span class="err" id="pass-error"></span>
+        </div>
+        <div class="form-element">
+            <label for="c_password">Confirm Password</label>
+            <input id="c_password" type="password" name="" id="" placeholder="" required>
+            <span class="err" id="cpass-error"></span>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; margin-top:10px">
+            <button onclick="resetHandler()" type="button" class="form-reset-button">Reset</button>
+            <button onclick="submitHandler()" type="button" class="form-submit-button">Submit</button>
+        </div>
+        <span class="success" id="success">Validation Successful</span>
+
+    </form>
+    
+</body>
+</html>
