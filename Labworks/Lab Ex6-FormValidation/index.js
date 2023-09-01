@@ -83,7 +83,6 @@ const nameValidate =(e)=>{
             document.getElementById("name-error").innerText=""
             document.getElementById("name-error").style.backgroundColor="transparent"
         },5000)
-
     }
     else if(!nameRegex.test(name)){
         nameflag=false
@@ -151,12 +150,6 @@ const passwordValidate =(e)=>{
         },5000);
         } 
 }
-
-
-const cpasswordValidate =(e)=>{
-    
-}
-
 
 const showPassword=()=>{
     document.getElementById("password").type="text"
