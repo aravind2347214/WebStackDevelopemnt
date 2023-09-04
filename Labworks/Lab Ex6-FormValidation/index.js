@@ -9,9 +9,10 @@ const submitHandler =(e)=>{
     emailValidate();
     dobValidate();
     passwordValidate();
+
     const password=document.getElementById("password").value;
     const cpassword=document.getElementById("c_password").value;
-    const passwordRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/
+    const passwordRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,}$/
     if(passwordRegex.test(password)){
         passwordflag=true
         if(!(password===cpassword)){
@@ -28,7 +29,6 @@ const submitHandler =(e)=>{
     }
 
 
-   
 
         // validation Sucesss;
         if(cpasswordflag===true && passwordflag ===true&& nameflag===true && emailflag===true && dobflag===true){
@@ -75,6 +75,15 @@ const getAge=(dob)=>{
 const nameValidate =(e)=>{
     const name= document.getElementById("name").value;
     const nameRegex= /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$/;
+    if(name.length<3){
+        nameflag=false
+        document.getElementById("name-error").innerText="Minimum of 3 alphabets"
+        document.getElementById("name-error").style.backgroundColor="rgba(255, 169, 169, 0.2)"
+        setTimeout(() => {
+            document.getElementById("name-error").innerText=""
+            document.getElementById("name-error").style.backgroundColor="transparent"
+        },5000)
+    }
     if(name===""|| name===" " ||name===null){
         nameflag=false
         document.getElementById("name-error").innerText="Name cannot be empty"
@@ -91,7 +100,7 @@ const nameValidate =(e)=>{
         setTimeout(() => {
             document.getElementById("name-error").innerText=""
             document.getElementById("name-error").style.backgroundColor="transparent"
-        },5000);
+        },3000);
 
     }
     else{
