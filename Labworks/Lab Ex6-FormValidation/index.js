@@ -158,6 +158,7 @@ const passwordValidate =(e)=>{
             document.getElementById("pass-error").style.backgroundColor="transparent"
         },5000);
         } 
+    cpasswordflag=false;
 }
 
 const showPassword=()=>{
