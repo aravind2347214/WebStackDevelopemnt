@@ -172,3 +172,8 @@ const hidePassword=()=>{
     document.getElementById("openeye").style.display="none";
     document.getElementById("closeeye").style.display="block";
 }
+window.onload=()=>{
+    document.getElementById("clickme").addEventListener("click",()=>{
+        alert("div is clicked")
+    })
+}
