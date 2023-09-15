@@ -1,0 +1,94 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.fetchButton{
+    padding: 10px 20px ;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: #101010;
+    background-color: #efefef;
+    border: 2px solid #101010;
+
+    margin-top: 20px ;
+}
+
+.fetchButton:hover{
+    background-color: #101010;
+    color: white;
+    transition:  ease-in 0.5s;
+    
+
+}
+
+
+
+.question-container{
+    background-color: rgb(234, 234, 234);
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius:5px ;
+    font-size: 18px;
+}
+
+.heading{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.booklist{
+    /* background-color: red; */
+    padding: 10px;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.single-book{
+    max-width: 300px;
+    padding:10px;
+    /* background-color: yellow; */
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.196);
+}
+
+.single-book:hover{
+    max-width: 300px;
+    padding:10px;
+    /* background-color: yellow; */
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+    transition: ease-in 0.5s;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.196);
+}
+
+.book-title{
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.book-author{
+    font-size: 15px;
+    text-align: left;
+}
+
+.book-desc{
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+
