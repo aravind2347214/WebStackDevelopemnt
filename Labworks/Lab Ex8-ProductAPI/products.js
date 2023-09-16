@@ -1,4 +1,4 @@
-[
+const productData=[
     {
         "name": "Smartphone",
         "description": "A high-end smartphone with a powerful processor, a large AMOLED display, and a versatile camera system.",
