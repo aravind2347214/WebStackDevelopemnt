@@ -4,10 +4,12 @@ var booklist=[];
 window.onload=()=>{
     var fetchbttn=document.getElementById("fetchButton");
     fetchbttn.addEventListener('click', async()=>{
+        document.getElementById("loading").style.display="block"
         await fetch(baseURL).then((res)=>{
             res.json().then((data)=>{
                 booklist=data.results.books
                 console.log(booklist);
+                document.getElementById("loading").style.display="none"
                 for(let i = 0;i<booklist.length;i++){
                     var newbook=document.createElement('div')
                     newbook.className="single-book";
@@ -16,8 +18,9 @@ window.onload=()=>{
                     bookimg.className="book-image"
                     bookimg.width=100;
                     bookimg.height=100;
-                    bookimg.style.margin="auto"
                     console.log(bookimg.src)
+                    var bookinfo=document.createElement('div')
+                    bookinfo.className="book-info"
                     var title=document.createElement('div')
                     title.className="book-title";
                     title.innerHTML=booklist[i].title
@@ -27,11 +30,11 @@ window.onload=()=>{
                     var desc=document.createElement('div')
                     desc.className="book-desc ";
                     desc.innerHTML=booklist[i].description
+                    bookinfo.appendChild(title)
+                    bookinfo.appendChild(author)
+                    bookinfo.appendChild(desc)
                     newbook.appendChild(bookimg)
-                    newbook.appendChild(title)
-                    newbook.appendChild(author)
-                    newbook.appendChild(desc)
-
+                    newbook.appendChild(bookinfo)
                     document.getElementById("booklist").appendChild(newbook)
                 }
             })

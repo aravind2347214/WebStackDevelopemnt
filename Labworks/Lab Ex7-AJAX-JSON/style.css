@@ -2,10 +2,14 @@ html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+    padding: 0px 20px;
+}
+
 
 .fetchButton{
-    padding: 10px 20px ;
-    border-radius: 8px;
+    padding: 8px 16px ;
+    /* border-radius: 8px; */
     font-weight: bold;
     cursor: pointer;
     border: none;
@@ -31,60 +35,72 @@ html{
 .question-container{
     background-color: rgb(234, 234, 234);
     width: 90%;
-    margin: 50px auto;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
     padding: 20px;
-    border-radius:5px ;
-    font-size: 18px;
+    /* border-radius:5px ; */
+    font-size: 16px;
 }
 
 .heading{
     font-size: 50px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    margin: 10px 0px;
 }
 
 .booklist{
     /* background-color: red; */
-    padding: 10px;
-    width: 95%;
+    /* padding: 10px; */
+    width: 93%;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     gap: 15px;
-    justify-content: center;
 }
 
 .single-book{
-    max-width: 300px;
+    /* width: 100%; */
     padding:10px;
     /* background-color: yellow; */
-    border: 2px solid black;
-    border-radius: 4px;
-    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.196);
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
 }
 
 .single-book:hover{
-    max-width: 300px;
+
     padding:10px;
     /* background-color: yellow; */
-    border: 2px solid black;
-    color: white;
-    background-color: black;
-    transition: ease-in 0.5s;
-    border-radius: 4px;
-    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.196);
+    border-bottom: 2px solid rgb(185, 185, 185);
+    color: black;
+    background-color: rgb(233 233 233);
+    transition: ease-in 0.3s;
+}
+
+.book-info{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 300px;
+
 }
 
 .book-title{
     font-weight: bold;
     font-size: 18px;
+    text-transform: capitalize;
 
 }
 
 .book-author{
     font-size: 15px;
     text-align: left;
+    font-style: italic;
 }
 
 .book-desc{
@@ -93,4 +109,11 @@ html{
     text-align: justify;
 }
 
+.loading{
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    padding: 40px 20px ;
+    color: rgb(193, 193, 193);
+}
 

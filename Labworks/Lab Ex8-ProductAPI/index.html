@@ -10,7 +10,7 @@
 <body>
        
     <div class="question-container">
-        <div class="heading">AJAX JSON</div>
+        <div class="heading">Product API</div>
         <div>
             Write JavaScript code to make an AJAX request to fetch the products.json file from the server.<br><br>
             Create a function to parse the JSON data once it's retrieved successfully.<br><br>
@@ -24,11 +24,11 @@
 
     <div class="products-container" id="products-container">
         <div class="actions-section">
-            <input type="text" name="" id="searchinput" oninput="setDefaultList()" placeholder="Search your desired Product Name">
+            <input type="text" name="" id="searchinput" oninput="setDefaultList()" placeholder="Search your desired Product Name and apply filter">
             <select name="" id="filtervalue"  class="filter" >
                 <option value="nosort" selected>No Sorting</option>
-                <option value="name" >Name</option>
-                <option value="price">Price</option>
+                <option value="name" >Sort By Name</option>
+                <option value="price">Sort By Price</option>
             </select>
             <button class="searchbutton" id="searchButton"><span>Apply Filters</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M440-160q-17 0-28.5-11.5T400-200v-240L161-745q-14-17-4-36t31-19h584q21 0 31 19t-4 36L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-276 240-304H240l240 304Zm0 0Z" fill="white"/></svg>
@@ -44,31 +44,10 @@
                 <!-- <th>Image</th> -->
             </tr>
             <tbody class="tbody" id="tbody">
-
             </tbody>
-
-            <!-- <tr>
-                <td>Plastic Bottle</td>
-                <td>$5</td>
-                <td>bottle ade of plactic</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Plastic Bottle</td>
-                <td>$5</td>
-                <td>bottle ade of plactic</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Plastic Bottle</td>
-                <td>$5</td>
-                <td>bottle ade of plactic</td>
-                <td></td>
-            </tr> -->
-
         </table>
-
-        <!-- <div class="noproducts" id="noproducts">No Products For Now !!</div> -->
+        <div class="loading"  id="loading">loading...</div>
+        <div class="noproducts" id="noproducts">No Products For Now !!</div>
     </div>
     
 </body>
