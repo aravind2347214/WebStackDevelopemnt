@@ -1,0 +1,42 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.fetchButton{
+    padding: 10px 20px ;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: #101010;
+    background-color: #efefef;
+    border: 2px solid #101010;
+
+    margin-top: 20px ;
+}
+
+.fetchButton:hover{
+    background-color: #101010;
+    color: white;
+    transition:  ease-in 0.5s;
+    
+
+}
+
+
+
+.question-container{
+    background-color: rgb(234, 234, 234);
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius:5px ;
+    font-size: 18px;
+}
+
+.heading{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
