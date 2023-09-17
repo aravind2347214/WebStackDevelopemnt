@@ -13,6 +13,9 @@ html{
 
     
 }
+::-webkit-scrollbar{
+    display: none;
+}
 
 .form-header{
     font-size: 30px;

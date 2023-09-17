@@ -44,6 +44,14 @@ const searchOrFilterData = () => {
         else if(filterType==="price"){
             newlist = newlist.slice().sort((a,b)=>a.price - b.price)
         }
+        else if(filterType==="pricedesc"){
+          newlist = newlist.slice().sort((a,b)=>a.price - b.price)
+          newlist=newlist.reverse()
+      }
+      else if(filterType==="namedesc"){
+        newlist = newlist.slice().sort((a,b)=>a.name.localeCompare(b.name))
+        newlist=newlist.reverse()
+      }
         renderList(newlist);
       }
   }
@@ -57,6 +65,14 @@ const searchOrFilterData = () => {
         else if(filterType==="price"){
             newlist = newlist.slice().sort((a,b)=>a.price - b.price)
         }
+        else if(filterType==="pricedesc"){
+          newlist = newlist.slice().sort((a,b)=>a.price - b.price)
+          newlist=newlist.reverse()
+      }
+      else if(filterType==="namedesc"){
+        newlist = newlist.slice().sort((a,b)=>a.name.localeCompare(b.name))
+        newlist=newlist.reverse()
+      }
         renderList(newlist);99
 
   }
