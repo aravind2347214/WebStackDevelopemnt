@@ -56,9 +56,16 @@ body{
     background-color: rgb(237, 237, 237);
     border-radius: 3px;
     justify-content: center;
-    /* max-height: 500px; */
-    /* overflow-y: auto; */
+    max-height: 400px;
+    overflow-y: auto;
 }
+
+.items-container::-webkit-scrollbar{
+    display: none;
+}
+
+
+
 
 .single-item{
     padding:10px;
