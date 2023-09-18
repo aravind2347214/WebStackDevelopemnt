@@ -62,8 +62,11 @@ body{
 
 table{
     width: 100%;
+    
     /* background-color: blue; */
 }
+
+
 
 tr{
     padding: 5px;

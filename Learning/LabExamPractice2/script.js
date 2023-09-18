@@ -68,7 +68,9 @@ window.onload=()=>{
 
     // --------------------Exhange Rates Api-------------------------------
 
-    const exchangeApi = "https://api.apilayer.com/exchangerates_data/latest?base=USD"
+
+    
+    // const exchangeApi = "https://api.apilayer.com/exchangerates_data/latest?base=USD"
     
     var myHeaders = new Headers()
     myHeaders.append("apikey","0h399deSlkFvh7EGq6XRKVJVoUIAbpoQ")
@@ -88,7 +90,10 @@ window.onload=()=>{
     var exchangeRates={}
     exchangeButton.addEventListener('click',async()=>{
         exchangeRates={}
+        document.getElementById("exchangebody").innerHTML=null
         console.log("Exchange button was clicked")
+        var base = document.getElementById("base").value
+        const exchangeApi = `https://api.apilayer.com/exchangerates_data/latest?base=${base}`
         await fetch(exchangeApi,requestOptions).then((res)=>{
             res.json().then((data)=>{
                 // console.log(data);

@@ -74,31 +74,48 @@ body{
 
 .item-image{
     margin: auto;
-}
 
+}
 
 table{
     width: 100%;
-    /* background-color: blue; */
 }
 
-tr{
-    padding: 5px;
-    /* background-color: green; */
-    /* border-radius: 8px; */
+tbody{
+    display:block;
+    max-height:400px;
+    overflow-y:auto;
+    overflow-x: hidden;   
 }
-/* .table-header{
-    border-radius: 10px;
-} */
+
+tbody::-webkit-scrollbar{
+    display: none;    
+}
+
+
+thead , tr {
+    display:table;
+    width: 100%;
+    table-layout:fixed;  
+}
+tbody,thead{
+    width: 100%;
+}
+
+
+
+tr{
+    padding: 5px; 
+}
+
 
 th{
     text-align: left;
     font-size: 16px;
     background-color: #232323;
-    padding: 10px;
+    padding: 5px;
     /* border-radius: 8px; */
     color: white;
-
 }
 
 td{
@@ -120,3 +137,6 @@ input{
     font-size: 16px;
 }
 
+select{
+    padding: 5px;
+}

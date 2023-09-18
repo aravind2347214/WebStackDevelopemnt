@@ -41,12 +41,25 @@
     <button class="fetch-button" id="exchange">Get Exhange Rates</button>
     <button class="fetch-button" id="clearexchange">Clear Exchange Rates</button>
     <div class="items-container">
+        <span>
+        <div>Base</div>
+        <select name="base" id="base">
+            <option value="USD" selected>1 US Dollar</option>
+            <option value="INR" >1 Indian Rupee</option>
+            <option value="EUR" >1 Euro</option>
+            <option value="AUD" >1 Australian Dollar</option>
+            <option value="AED" >1 Dirham</option>
+
+        </select>   
+        </span>
         <table  id="exchange-container">
-            <tr>
+            <thead>
                 <th>Country Code</th>
                 <th>Exchange Rate</th>
-            </tr>
+            </thead>
             <tbody class="tbody" id="exchangebody">
+                
+            
             
             </tbody>
     
@@ -60,16 +73,17 @@
 
     <!-- Books in A Container -->
     <button class="fetch-button" id="books">Get Books</button>
-    <button class="fetch-button" id="clearbook">Clear Exchange Rates</button>
+    <button class="fetch-button" id="clearbook">Clear Book List</button>
     <div class="items-container" id="books-container">
         <table  id="books-container">
-            <tr>
+            <thead>
                 <th>Title</th>
                 <th>Author Name</th>
                 <th>Description</th>
                 <th>Image</th>
-            </tr>
+            </thead>
             <tbody class="tbody" id="bookbody">
+              
             
             </tbody>
     
