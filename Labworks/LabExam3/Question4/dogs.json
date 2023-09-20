@@ -1,0 +1,8 @@
+[
+{ "breed": "Golden Retriever", "color":"Golden","country": "United States"},
+{ "breed":" German Shepherd ","color":" Black and Tan ", "country": "Germany"},
+{ "breed":" Poodle ","color":" White ","country": "France"},
+{ "breed":" Bulldog ","color":" Brindle ","country": "United Kingdom"},
+{ "breed":" Labrador Retriever ","color":" Yellow ","country": "Canada"}
+]
+

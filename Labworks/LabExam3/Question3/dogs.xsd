@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-    <xs:element name="products">
+    <xs:element name="dogs">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="product" maxOccurs="unbounded">
+                <xs:element name="dog" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="id" type="xs:string" />
-                            <xs:element name="name" type="xs:string" />
-                            <xs:element name="price" type="xs:string" />
-                            <xs:element name="description" type="xs:string" />
+                            <xs:element name="breed" type="xs:string" />
+                            <xs:element name="color" type="xs:string" />
+                            <xs:element name="country" type="xs:string" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

@@ -1,0 +1,91 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container{
+    width: 90%;
+    padding: 50px;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+.form-container{
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.form-header{
+    font-weight: bold;
+    font-size: 50px;
+    margin: 20px auto;
+}
+
+
+
+.form-element{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label{
+    font-size: 12px;
+    color: #020202;
+    font-weight: bold;
+}
+
+input,textarea{
+    padding: 10px;
+    border-radius: 3px;
+    resize: none;
+    border: 3px solid rgb(136, 136, 136);
+}
+
+input:focus,textarea:focus{
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 0px;
+    resize: none;
+    border: 3px solid rgb(30, 30, 139);
+}
+
+
+
+
+.submit-button{
+    padding: 8px 16px;
+    color: white;
+    background-color: rgb(30, 30, 139);
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-button:hover{
+    
+    padding: 9px 18px;
+    background-color: rgb(0, 0, 40);
+}
+
+.err{
+    padding: 2px 5px;
+    background-color: rgb(255, 171, 171);
+    border-bottom: 1px solid red;
+    visibility: hidden;
+    font-size: 10px;
+    color: red;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+
+.success{
+    padding: 10px;
+    background-color: rgb(209, 255, 139);
+    border: 1px solid green;
+    visibility: hidden;
+}
+

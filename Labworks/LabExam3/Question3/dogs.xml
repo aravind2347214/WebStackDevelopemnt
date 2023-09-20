@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-model href="file.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
+<?xml-model href="dogs.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<dogs>
+    <dog>
+        <breed>Golden Retriever</breed>
+        <color>Golden</color>
+        <country>United States</country>
+    </dog>
+    <dog>
+        <breed>German Shepherd</breed>
+        <color>Black and Tan</color>
+        <country>Germany</country>
+    </dog>
+    <dog>
+        <breed>Poodle</breed>
+        <color>Brindle</color>
+        <country>France</country>
+    </dog>
+    <dog>
+        <breed>Bulldog</breed>
+        <color>Golden</color>
+        <country>United Kingdom</country>
+    </dog>
+    <dog>
+        <breed>Labrador Retriever</breed>
+        <color>Yellow</color>
+        <country>Canada</country>
+    </dog>
+    <dog>
+        <breed>Boxer</breed>
+        <color>Golden</color>
+        <country>United States</country>
+    </dog>
+</dogs>

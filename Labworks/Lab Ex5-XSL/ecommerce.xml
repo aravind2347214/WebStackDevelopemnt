@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-model href="file.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
 <?xml-model href="ecommerce.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
 <products>
     <product>
         <id>1</id>

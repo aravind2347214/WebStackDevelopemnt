@@ -1,7 +1,8 @@
-window.onload=()=>{
+    window.onload=()=>{
     // --------------------Jokes Api------------------------------
 
     const jokesApi = "https://v2.jokeapi.dev/joke/Any"
+    // const jokesApi = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
     var jokeButton=document.getElementById("joke");
     var jokeClearButton=document.getElementById("clearjoke")
 
