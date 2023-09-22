@@ -18,8 +18,14 @@ window.onload = () => {
     })
     
   });
-  searchButton.addEventListener("click", searchOrFilterData);
+  // searchButton.addEventListener("click", searchOrFilterData);
+
+  document.getElementById("searchinput").addEventListener('input',searchOrFilterData)
+  document.getElementById("filtervalue").addEventListener('change',searchOrFilterData)
 };
+
+
+
 
 const searchOrFilterData = () => {
   const searchitem = document.getElementById("searchinput").value;
