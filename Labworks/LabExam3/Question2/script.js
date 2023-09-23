@@ -2,6 +2,7 @@ window.onload=()=>{
 
     var nameflag=null
     var emailflag=null
+    var cmtflag = null
 
     const nameValidate=()=>{
 
@@ -45,6 +46,24 @@ window.onload=()=>{
 
     }
 
+
+    const commentValidate=()=>{
+        var comments=document.getElementById("comments").value
+        if (comments==""){
+            document.getElementById("c-err").style.visibility="visible";
+            document.getElementById("c-err").innerText="Please enter your message!"
+            cmtflag= false
+        }
+        else{
+            cmtflag = true
+            document.getElementById("c-err").style.visibility="hidden";
+        
+
+        }
+
+
+    }
+
     const emailValidate=()=>{
         const email= document.getElementById("email").value;
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -69,10 +88,15 @@ window.onload=()=>{
 
     var submitbutton = document.getElementById("submitButton")
 
+    
+
     submitbutton.addEventListener('click',(e)=>{
         e.preventDefault()
         nameValidate()
         emailValidate()
+        commentValidate()
+
+
 
         if(nameflag&&emailflag){
             document.getElementById("success").style.visibility="visible"
