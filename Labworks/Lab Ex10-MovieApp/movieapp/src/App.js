@@ -1,26 +1,23 @@
-
+import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import BooksPage from './pages/BooksPage';
+import MoviePage from './pages/MoviePage';
 import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
 import Home from './pages/Home';
-
-
-
+import ContactPage from './pages/ContactPage';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
+     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/books' element={<BooksPage/>}/>
+        <Route path='/movies' element={<MoviePage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
     </BrowserRouter>
-   
-   
+    </>
   );
 }
 

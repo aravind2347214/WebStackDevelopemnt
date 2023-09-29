@@ -30,6 +30,8 @@ window.onload = () => {
 const searchOrFilterData = () => {
   const searchitem = document.getElementById("searchinput").value;
   const filterType = document.getElementById("filtervalue").value;
+  var noproducts = document.getElementById("noproducts");
+  noproducts.style.display = "none";
 
   var newlist = [];
   if(searchitem!=''){
@@ -45,16 +47,29 @@ const searchOrFilterData = () => {
       } 
       else {
         if(filterType==="name"){
+          document.getElementById("pname").innerText="Product Name (Ascending)"
+          document.getElementById("pprice").innerText="Product Price"
             newlist = newlist.slice().sort((a,b)=>a.name.localeCompare(b.name))
         }
+        else if(filterType==="nosort"){
+        document.getElementById("pname").innerText="Product Name"
+        document.getElementById("pprice").innerText="Product Price"
+
+        }
         else if(filterType==="price"){
+          document.getElementById("pprice").innerText="Product Price (Low to High)"
+          document.getElementById("pprice").innerText="Product Price"
             newlist = newlist.slice().sort((a,b)=>a.price - b.price)
         }
         else if(filterType==="pricedesc"){
+          document.getElementById("pprice").innerText="Product Price (High to Low)"
+          document.getElementById("pname").innerText="Product Name"
           newlist = newlist.slice().sort((a,b)=>a.price - b.price)
           newlist=newlist.reverse()
       }
       else if(filterType==="namedesc"){
+        document.getElementById("pname").innerText="Product Name (Descending)"
+        document.getElementById("pprice").innerText="Product Price"
         newlist = newlist.slice().sort((a,b)=>a.name.localeCompare(b.name))
         newlist=newlist.reverse()
       }
@@ -66,16 +81,29 @@ const searchOrFilterData = () => {
     document.getElementById("tbody").innerHTML = null;
      
         if(filterType==="name"){
+            document.getElementById("pname").innerText="Product Name (Ascending)"
+            document.getElementById("pprice").innerText="Product Price"
             newlist = newlist.slice().sort((a,b)=>a.name.localeCompare(b.name))
         }
+        else if(filterType==="nosort"){
+          document.getElementById("pname").innerText="Product Name"
+          document.getElementById("pprice").innerText="Product Price"
+  
+          }
         else if(filterType==="price"){
+            document.getElementById("pname").innerText="Product Name"
+            document.getElementById("pprice").innerText="Product Price (Low to High)"
             newlist = newlist.slice().sort((a,b)=>a.price - b.price)
         }
         else if(filterType==="pricedesc"){
+          document.getElementById("pname").innerText="Product Name"
+          document.getElementById("pprice").innerText="Product Price (High to Low)"
           newlist = newlist.slice().sort((a,b)=>a.price - b.price)
           newlist=newlist.reverse()
       }
       else if(filterType==="namedesc"){
+        document.getElementById("pname").innerText=" Product Name (Descending)"
+        document.getElementById("pprice").innerText="Product Price"
         newlist = newlist.slice().sort((a,b)=>a.name.localeCompare(b.name))
         newlist=newlist.reverse()
       }
@@ -88,6 +116,10 @@ const setDefaultList = () => {
   const searchitem = document.getElementById("searchinput").value;
   if (searchitem === null || searchitem === "") {
     document.getElementById("tbody").innerHTML = null;
+    document.getElementById("pname").innerText="Product Name"
+    document.getElementById("pprice").innerText="Product Price"
+    var noproducts = document.getElementById("noproducts");
+    noproducts.style.display = "none";
     renderList(productData);
   }
 };
@@ -102,14 +134,14 @@ const renderList = async (dataList) => {
     price.innerHTML = dataList[i].price;
     var desc = document.createElement("td");
     desc.innerHTML = dataList[i].description;
-    // var imgcell = document.createElement('td')
-    // var img = document.createElement('img')
-    // img.src=dataList[i].image_url
-    // imgcell.appendChild(img)
+    var imgcell = document.createElement('td')
+    var img = document.createElement('img')
+    img.src=dataList[i].image_url
+    imgcell.appendChild(img)
     row.appendChild(name);
-    row.appendChild(price);
     row.appendChild(desc);
-    // row.appendChild(imgcell)
+    row.appendChild(price);
+    row.appendChild(imgcell)
     document.getElementById("tbody").appendChild(row);
   }
 };
