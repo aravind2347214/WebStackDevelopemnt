@@ -103,7 +103,7 @@ th{
 
 td{
     padding: 10px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 tr:hover td{
@@ -183,5 +183,16 @@ input{
 select{
     padding: 10px;
     border-radius: 8px;
+}
+
+#pname{
+    border-top-left-radius:8px ;
+    border-bottom-left-radius: 8px;
+}
+
+#pimg{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+    /* background-color: red; */
 }
 

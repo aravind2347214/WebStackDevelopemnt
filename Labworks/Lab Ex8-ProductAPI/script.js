@@ -129,14 +129,17 @@ const renderList = async (dataList) => {
   for (let i = 0; i < dataList.length; i++) {
     var row = document.createElement("tr");
     var name = document.createElement("td");
+    name.id="pname"
     name.innerHTML = dataList[i].name;
     var price = document.createElement("td");
-    price.innerHTML = dataList[i].price;
+    price.innerHTML = "<b>$</b> "+dataList[i].price ;
     var desc = document.createElement("td");
     desc.innerHTML = dataList[i].description;
     var imgcell = document.createElement('td')
     var img = document.createElement('img')
     img.src=dataList[i].image_url
+    img.alt="Not available"
+    imgcell.id="pimg"
     imgcell.appendChild(img)
     row.appendChild(name);
     row.appendChild(desc);

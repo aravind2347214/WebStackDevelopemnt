@@ -31,6 +31,8 @@ function BooksPage() {
     });
   },[])
 
+
+
   const filterBook=()=>{
     var newlist=[]
     if(searchInput!==''){
@@ -107,8 +109,7 @@ function BooksPage() {
           books?.map((node,i)=>(
             <SingleBookCard 
             key={i} data={node}
-            handelReviewModalPopUp={handelReviewModalPopUp} 
-          
+            handelReviewModalPopUp={handelReviewModalPopUp}       
             />
           ))
         }

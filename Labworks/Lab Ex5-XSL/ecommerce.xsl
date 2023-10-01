@@ -10,6 +10,7 @@
                     <th>Product Name</th>
                     <th>Price</th>
                     <th>Description</th>
+                    <th>Price Description</th>
                 </tr>
                 <xsl:for-each select="product">
                 <tr>
@@ -17,6 +18,15 @@
                     <td><xsl:value-of select="name" /> </td>
                     <td><xsl:value-of select="price" /> </td>
                     <td><xsl:value-of select="description" /> </td>
+                    <td>
+                        <xsl:choose>
+                            <xsl:when test="price &gt; 200">Greater Than 200</xsl:when>
+                            <xsl:when test="price &gt; 50">Greater Than 50</xsl:when>
+                            <xsl:when test="price &gt; 5">Greater Than 5</xsl:when>
+                            <xsl:otherwise>Dont Know What to do</xsl:otherwise>
+                        </xsl:choose>
+                    </td>
+                    
                 </tr>
             </xsl:for-each>
             </table>
