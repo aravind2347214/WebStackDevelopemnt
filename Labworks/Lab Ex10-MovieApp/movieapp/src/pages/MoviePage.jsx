@@ -6,23 +6,21 @@ import axios from 'axios'
 function MoviePage() {
   const APIURL = "https://www.omdbapi.com/?apikey=1565bd66&t="
   const [movieName,setMovieName]=useState("")
-  const [searchMovie,setSearchMovie]=useState("")
-  const [movieData,setMovieData]=useState({})
-  const [movieErr,setMovieErr]=useState(false)
+  const [movieData,setMovieData]=useState([])
   const [loading,setLoading]=useState(null)
 
   const handleInput=(e)=>{
     setMovieName(e.target.value)
   }
 
-  const searchMovieHandler=()=>{
+  const searchMovieHandler=async()=>{
     if(movieName===""|| movieName===null){
       alert("Enter A Movie Name")
     }
     else{
       setLoading(true)
       var api = APIURL+ movieName
-      axios.get(api).then((res)=>{
+      await axios.get(api).then((res)=>{
         console.log('response', res);
         setMovieData(res.data)
         setLoading(false)
@@ -32,18 +30,21 @@ function MoviePage() {
     }
    }
 
-   const actors="Scarlett Johansson, Morgan Freeman,Choi Min-sik"
-   const listactors = actors.split(",")
-   console.log((listactors));
+
+   const handleEnter=(e)=>{
+    if (e.key === 'Enter')
+    searchMovieHandler() 
+   }
 
 
   return (
     <>
     <Navbar activeTab="movies"/>
 
-    <div className='w-11/12 p-2 mx-auto mt-20 flex flex-row gap-5  '>
+    <div className='flex flex-row w-11/12 gap-5 p-2 mx-auto mt-20 '>
         <input className='flex-1 p-2 border-2 border-black' 
-        onChange={handleInput} 
+        onChange={handleInput}
+        onKeyDown={handleEnter} 
         value={movieName}
         type="text" name="" id="" placeholder='Search for the Movie or TV Show  you want!! Example: Batman'/>
         <button 
@@ -60,7 +61,7 @@ function MoviePage() {
 
     {
       movieData.Title && !loading?
-    <div className='w-11/12 mx-auto my-5 p-2  flex flex-row  gap-2 items-start'>
+    <div className='flex flex-row items-start w-11/12 gap-2 p-2 mx-auto my-5 '>
       <div className='flex flex-col w-[60%] '>
         <div className='flex flex-row items-center justify-between'>
           <div>
@@ -91,7 +92,7 @@ function MoviePage() {
           }
 
         </div>
-        <div className=' flex flex-row gap-2 my-2'>
+        <div className='flex flex-row gap-2 my-2 '>
               <div className='py-1 px-2 w-fit border-2 border-[#531616]'>Director : <span className='font-bold'>{movieData?.Writer}</span></div>
               <div className='py-1 px-2 w-fit border-2 border-[#531616]'>Writer : <span className='font-bold'>{movieData?.Director}</span></div>
           </div>
@@ -110,7 +111,7 @@ function MoviePage() {
       <div className='flex flex-col gap-3 w-[60%] '>
         <img 
         src={movieData?.Poster}
-        className='w-1/2 h-1/2 mx-auto scale-95' 
+        className='w-1/2 mx-auto scale-95 h-1/2' 
         alt="" 
         />
       </div>

@@ -137,7 +137,7 @@ const dobValidate =(e)=>{
             document.getElementById("dob-error").style.backgroundColor="transparent"
         },5000);   
     }
-    else{
+    else{ 
         dobflag=true;
     }
     
@@ -171,9 +171,4 @@ const hidePassword=()=>{
     document.getElementById("password").type="password"
     document.getElementById("openeye").style.display="none";
     document.getElementById("closeeye").style.display="block";
-}
-window.onload=()=>{
-    document.getElementById("clickme").addEventListener("click",()=>{
-        alert("div is clicked")
-    })
 }
